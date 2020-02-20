@@ -15,7 +15,7 @@ function sum(a, b) { //eslint-disable-line
     return [theSum, message];
 }
 
-console.log( testSum());
+console.log(testSum());
 
 // Here is the test for sum(); uncomment it to run it
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -57,10 +57,10 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
     var sumation=sum(a,b)[0];
      sumation=sum(sumation,c)[0] ;
-    /// console.log(sumation);
+   
     var mul=multiply(a,b)[0];
     mul=multiply(mul,c)[0];
-    //console.log(mul);
+   
 
     var message1= `${a} and ${b} and ${c} sum to ${sumation}.`;
     var message2= `The product of ${a} and ${b} and ${c} is ${mul}.`;
@@ -97,7 +97,7 @@ function sumArray(sumArr) { //eslint-disable-line
 
     }
     //arrSum=arrSum/2+4.5;
-    console.log(arrSum, " Arrsum");
+    //console.log(arrSum, " Arrsum");
     var message=`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${arrSum} is their sum.`;
     return [arrSum,message];
 }
@@ -120,7 +120,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 function multiplyArray(multArr) { //eslint-disable-line
-    
+    var arrMul=1;
+
+    for(var i=0; i<multArr.length; i++)
+    {
+        arrMul=multiply(arrMul,multArr[i])[0];
+
+    }
+    //arrSum=arrSum/2+4.5;
+   //console.log(arrMul, " ArrMul");
+    var message=`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${arrMul}.`;
+    return [arrMul,message];    
 
 }
 
